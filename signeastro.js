@@ -136,8 +136,8 @@ function bulle() {
   document.getElementById("imagesigne").title = infobulle;
 }
 
-const Arrow = document.getElementById("arrow-up");
+const Arrow = document.getElementById("arrow_up");
 
-Arrow.addEventListener("animationend", () => {
-  Arrow.style.animation = "ArrowUpAnimation 3s ease infinite";
+arrow_up.addEventListener("animationend", () => {
+  arrow_up.style.animation = "ArrowUpAnimation 3s ease infinite";
 });

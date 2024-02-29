@@ -75,7 +75,7 @@ body {
 
 /* -------------------------------------------------------------*/
 
-.arrow-up {
+.arrow_up {
   position: absolute;
   width: 0;
   height: 0;
@@ -93,6 +93,7 @@ body {
     opacity: 0;
   }
   100% {
+    -webkit-filter: blur(0px);
     opacity: 1;
   }
 }
