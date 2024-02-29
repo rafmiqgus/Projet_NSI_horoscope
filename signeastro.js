@@ -136,8 +136,30 @@ function bulle() {
   document.getElementById("imagesigne").title = infobulle;
 }
 
-const Arrow = document.getElementById("arrow_up");
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM loaded...");
 
-arrow_up.addEventListener("animationend", () => {
-  arrow_up.style.animation = "ArrowUpAnimation 3s ease infinite";
+  const header_container = document.querySelector(".header_container");
+  const arrow_up = document.getElementById("arrow_up");
+  const window_height = window.innerHeight;
+
+  let headerContainerHeight = header_container.getBoundingClientRect().height;
+
+  const updateHeaderHeight = () => {
+    headerContainerHeight = header_container.getBoundingClientRect().height;
+    console.log("Updated header height:", headerContainerHeight);
+  };
+
+  window.addEventListener("wheel", function (event) {
+    updateHeaderHeight();
+    if (event.deltaY > 0 && headerContainerHeight > window.innerHeight / 2) {
+      header_container.classList.remove("HeaderContainerUpAnimation");
+      header_container.classList.add("HeaderContainerDownAnimation");
+      console.log("scroll down");
+    } else if (event.deltaY < 0 && headerContainerHeight <= window.innerHeight / 2) {
+      header_container.classList.remove("HeaderContainerDownAnimation");
+      header_container.classList.add("HeaderContainerUpAnimation");
+      console.log("scroll up");
+    }
+  });
 });
