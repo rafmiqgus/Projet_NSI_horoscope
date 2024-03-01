@@ -78,13 +78,13 @@ body {
     height: 31%;
   }
   to {
-    height: 85%;
+    height: 70%;
   }
 }
 
 @keyframes HeaderContainerDownAnimation {
   from {
-    height: 85%;
+    height: 70%;
   }
   to {
     height: 31%;
@@ -156,6 +156,51 @@ body {
 }
 
 /* -------------------------------------------------------------*/
+.form-container {
+  height: 40%;
+  width: 30%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #667eea, #764ba2, #7c186e)
+      border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* -------------------------------------------------------------*/
 
 section {
   position: absolute;
@@ -165,6 +210,7 @@ section {
   height: 100vh;
   background-size: cover;
   animation: animateBg 50s linear infinite;
+  z-index: -1;
 }
 
 @keyframes animateBg {
