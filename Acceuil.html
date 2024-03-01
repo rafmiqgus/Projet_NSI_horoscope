@@ -28,24 +28,42 @@
     <div class="form_animation">
       <div class="form_container">
         <form class="form">
-          <div class="form__group field form_jour">
-            <input
-              type="input"
-              class="form__field"
-              placeholder="Jour"
-              required=""
-            />
-            <label for="name" class="form__label">Jour</label>
+          <div class="Inputs_container">
+            <div class="form__group field form_jour">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="Jour"
+                required=""
+              />
+              <label
+                for="valeurJour"
+                id="valeurjour"
+                class="form__label"
+                name="valeurJour"
+                >Jour de naissance</label
+              >
+            </div>
+
+            <div class="form__group field form_mois">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="Mois"
+                required=""
+              />
+              <label
+                for="valeurMois"
+                id="valeurMois"
+                class="form__label"
+                name="valeurMois"
+                >Mois de naissance</label
+              >
+            </div>
           </div>
 
-          <div class="form__group field form_mois">
-            <input
-              type="input"
-              class="form__field"
-              placeholder="Mois"
-              required=""
-            />
-            <label for="name" class="form__label">Mois</label>
+          <div class="button_container">
+            <button onclick="signe_astro()">bouton</button>
           </div>
         </form>
       </div>
@@ -63,28 +81,5 @@
       <span class="animated-span"></span>
       <span class="animated-span"></span>
     </section>
-
-    <!-- <div class="input-container">
-      <label for="valeurJour">Entrée votre jour de naissance ici</label>
-      <input type="text" id="valeurJour" name="valeurJour" />
-
-      <label for="valeurMois">Entrée votre mois de naissance ici</label>
-      <input type="text" id="valeurMois" name="valeurMois" />
-
-      <button onclick="signe_astro()">Affichez le signe astro.</button>
-    </div>
-
-    <br />
-    <p id="signe"></p>
-    <img
-      id="imagesigne"
-      onmouseover="bulle()"
-      width="30px"
-      height="30px"
-      src="./images/blanc.png"
-      title=""
-    />
-    <h2 id="titre"></h2>
-    <p id="horoscope"></p> -->
   </body>
 </html>
