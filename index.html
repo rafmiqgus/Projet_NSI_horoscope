@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1"
+  />
+
+  <head>
+    <title>L'horoscope 100% réel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link rel="icon" href="./images/horoscope.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header_container">
+      <h1>
+        <span class="gradient"
+          >horoscope
+          <span class="glow">horoscope</span>
+        </span>
+        du jour
+      </h1>
+    </div>
+
+    <div class="arrow_up ArrowFadeIn"></div>
+
+    <div class="form_animation">
+      <div class="form_container">
+        <form class="form">
+          <div class="input_container">
+            <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                id="valeurJour"
+                placeholder="Jour"
+                required=""
+              />
+              <label
+                for="valeurJour"
+                id="valeurJour"
+                class="form__label"
+                name="valeurJour"
+                >Jour de naissance</label
+              >
+            </div>
+
+            <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                id="valeurMois"
+                placeholder="Mois"
+                required=""
+              />
+              <label
+                for="valeurMois"
+                id="valeurMois"
+                class="form__label"
+                name="valeurMois"
+                >Mois de naissance</label
+              >
+            </div>
+          </div>
+
+          <button id="button" onclick="signe_astro()">
+            horoscope
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <section>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+      <span class="animated-span"></span>
+    </section>
+  </body>
+</html>
