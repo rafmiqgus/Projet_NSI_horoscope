@@ -33,6 +33,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 900;
   white-space: nowrap;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .gradient {
@@ -51,6 +52,29 @@ body {
   background-clip: text;
   filter: blur(25px);
   inset: 0;
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------------------*/
+
+.horoscope_container {
+  display: inline-block;
+}
+
+.horoscope_container p {
+  color: white;
 }
 
 /* ------------------------------------------------------------*/
