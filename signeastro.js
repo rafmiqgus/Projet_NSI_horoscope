@@ -11,5 +11,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     element.innerHTML = signe;
   });
 
+  document.getElementById("image_signe").src = "images/" + signe + ".png";
   document.getElementById("horoscope").innerHTML = horoscope;
 });

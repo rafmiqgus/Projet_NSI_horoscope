@@ -22,10 +22,9 @@ body {
 .header_container {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -100%);
-  padding-bottom: 3%;
+  transform: translate(-50%, -50%);
 }
 
 .header_container h1 {
@@ -74,6 +73,8 @@ body {
 
 .horoscope_container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   margin-top: auto;
   height: 50%;
@@ -81,7 +82,6 @@ body {
   box-sizing: border-box;
   padding-left: 15%;
   padding-right: 15%;
-  padding-top: 3%;
 }
 
 .horoscope_container p {
@@ -94,12 +94,42 @@ body {
   font-weight: 600;
   text-align: center;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
-/* ------------------------------------------------------------*/
+#image_signe {
+  height: 50%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transform: translateY(-50%);
+  animation: text-focus-in-image-signe 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation-delay: 1.25s;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%)
+    hue-rotate(93deg) brightness(120%) contrast(90%);
+}
 
-
+@keyframes text-focus-in-image-signe {
+  0% {
+    -webkit-filter: blur(12px),
+      brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%)
+        hue-rotate(93deg) brightness(120%) contrast(90%);
+    filter: blur(12px),
+      brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%)
+        hue-rotate(93deg) brightness(120%) contrast(90%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px),
+      brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%)
+        hue-rotate(93deg) brightness(120%) contrast(90%);
+    filter: blur(0px),
+      brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%)
+        hue-rotate(93deg) brightness(120%) contrast(90%);
+    opacity: 1;
+  }
+}
 
 /* ------------------------------------------------------------*/
 
