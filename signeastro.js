@@ -10,4 +10,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   Array.from(signeElement).forEach((element) => {
     element.innerHTML = signe;
   });
+
+  document.getElementById("horoscope").innerHTML = horoscope;
 });
